@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final Deliverable</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="main" style="width: 100%">
+        <div style="width: 70%; float: left;">
+            <svg width="1000" height="700" style="border: 1px solid #777;">
+            </svg>
+        </div>
+        <div style="width: 30%; float: right;">
+            <div style="background-color:lightgrey; border: 3px solid; width: 85%">
+                <legend aria-hidden="true" style="font-weight: bold;"><u>Visualization Key:</u><p></p></legend>
+                <ul>
+                    <li> Current Average</li>
+                    <li> Current Minimum</li>
+                    <li> Current Maximum</li>
+                    <li> Average Minimum Since 1880</li>
+                    <li> Average Maximum Since 1880</li>
+                    <li> Record Minimum Since 1880</li>
+                    <li> Record Maximum Since 1880</li>
+                </ul>
+            </div>
+
+            <p style="padding-top: 10px; padding-bottom: 10px;"></p>
+
+            <div>
+                <label for="categorySelect" style="font-weight: bold;">Current City: </label>
+                <select class='button' id="categorySelect" onchange="onCategoryChanged()">
+                    <option selected value="CLT">Charlotte, North Carolina</option>
+                    <option value="CQT">Los Angeles, California</option>
+                    <option value="IND">Indianapolis, Indiana</option>
+                    <option value="JAX">Jacksonville, Florida</option>
+                    <option value="MDW">Chicago, Illinois</option>
+                    <option value="PHL">Philadelphia, Pennsylvania</option>
+                    <option value="PHX">Pheonix, Arizona</option>
+                    <option value="KHOU">Houston, Texas</option>
+                    <option value="KNYC">New York City, New York</option>
+                    <option value="KSEA">Seattle, Washington</option>
+                </select>
+            </div>
+
+            <p style="padding-top: 10px; padding-bottom: 10px;"></p>
+            
+            <fieldset>
+                <legend style="font-weight: bold;">Choose the temperature lines you want to show:</legend>
+            
+                <div>
+                <input type="checkbox" id="actual_average" name="actual_average" onclick="actualAverage()" checked>
+                <label for="actual_average">Current Average</label>
+                </div>
+            
+                <div>
+                <input type="checkbox" id="actual_min" name="actual_min" onclick="actualMin()">
+                <label for="actual_min">Current Minimum</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="actual_max" name="actual_max" onclick="actualMax()">
+                    <label for="actual_max">Current Maximum</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="average_min" name="average_min" onclick="averageMin()">
+                    <label for="average_min">Average Minimum Since 1880</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="average_max" name="average_max" onclick="averageMax()">
+                    <label for="average_max">Average Maximum Since 1880</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="record_min" name="record_min" onclick="recordMin()">
+                    <label for="record_min">Record Minimum Since 1880</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="record_max" name="record_max" onclick="recordMax()">
+                    <label for="record_max">Record Maximum Since 1880</label>
+                </div>
+            </fieldset>
+
+            <p style="padding-top: 10px; padding-bottom: 10px;"></p>
+
+            <button class='button' type="reset" onclick="restartViz()">Restart the Visualization</button>
+        </div>
+    </div>
+</body>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="./d3-tip.js"></script>
+<script src="./weather.js"></script>
+</html>

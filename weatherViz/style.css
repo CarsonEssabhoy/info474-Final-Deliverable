@@ -1,0 +1,172 @@
+.city path {
+    stroke-width: 1.5px;
+    fill: none;
+    z-index: -1;
+    position: relative;
+    opacity: 0.5;
+}
+
+.city-label {
+    text-anchor: middle;
+    font-size: 30px;
+    font-weight: semibold;
+    opacity: 0.8;
+}
+
+.axis-label {
+    text-anchor: middle;
+    font-size: 12px;
+    font-weight: semibold;
+}
+
+.grid path,
+.grid line {
+    stroke: #fff;
+}
+
+.background {
+    fill: #eee;
+}
+
+body {
+    font-family: "Open Sans";
+    margin: 0;
+}
+
+#main {
+    margin: 20px;
+}
+
+circle:hover {
+    opacity: 1;
+}
+
+.city path:hover {
+    opacity: 1;
+}
+
+.actual_average:hover ~ path.actual_average { 
+    opacity: 1;
+}
+
+.actual_min:hover ~ path.actual_min { 
+    opacity: 1;
+}
+
+.actual_max:hover ~ path.actual_max { 
+    opacity: 1;
+}
+
+.average_min:hover ~ path.average_min { 
+    opacity: 1;
+}
+
+.average_max:hover ~ path.average_max { 
+    opacity: 1;
+}
+
+.record_min:hover ~ path.record_min { 
+    opacity: 1;
+}
+
+.record_max:hover ~ path.record_max { 
+    opacity: 1;
+}
+
+li {
+    list-style-type: none;
+    position: relative;    /* It's needed for setting position to absolute in the next rule. */
+}
+
+li:nth-of-type(1)::before {
+    content: '■';
+    size: 100px;
+    color:black;
+}
+
+li:nth-of-type(2)::before {
+    content: '■';
+    size: 100px;
+    color:green;
+}
+
+li:nth-of-type(3)::before {
+    content: '■';
+    size: 100px;
+    color:yellow;
+}
+
+li:nth-of-type(4)::before {
+    content: '■';
+    size: 100px;
+    color:steelblue;
+}
+
+li:nth-of-type(5)::before {
+    content: '■';
+    size: 100px;
+    color:orange;
+}
+
+li:nth-of-type(6)::before {
+    content: '■';
+    size: 100px;
+    color:purple;
+}
+
+li:nth-of-type(7)::before {
+    content: '■';
+    size: 100px;
+    color:red;
+}
+
+ul {
+    display: table; /* keep the background color wrapped tight */
+    margin: 0px auto 0px auto; /* keep the table centered */
+    padding:5px;
+    background-color:lightgrey;
+    margin-left: 0px;
+}
+
+fieldset {
+    border: 3px solid;
+    text-align: left;
+    width: 80%;
+}
+  
+legend {
+    text-align: left;
+    padding: 0 20px;
+}
+
+.button {
+    display:inline-block;
+    padding:0.46em 1.6em;
+    border:0.1em solid #000000;
+    margin:0 0.2em 0.2em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#000000;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    background-color:#FFFFFF;
+    text-align:center;
+    transition: all 0.15s;
+}
+
+.button:hover{
+    text-shadow: 0 0 2em rgba(255,255,255,1);
+    color: white;
+    background-color: teal;
+    border-color:black;
+}
+
+option {
+    text-shadow: 0 0 2em rgba(255,255,255,1);
+    color: white;
+    background-color: teal;
+    border-color:black;
+}
+    
